@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b18">
+
+<title>Zero To Hero Master | Free Stock Market Community</title>
+<meta name="description" content="Join the Zero To Hero Master Telegram community for stock market education, market insights and research updates.">
+
+<!-- META PIXEL -->
+<script>
+const META_PIXEL_ID = "YOUR_PIXEL_ID";
+
+if (META_PIXEL_ID && META_PIXEL_ID !== "YOUR_PIXEL_ID") {
+  !function(f,b,e,v,n,t,s) {
+    if(f.fbq)return;
+    n=f.fbq=function(){n.callMethod ?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+  }(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', META_PIXEL_ID);
+  fbq('track', 'PageView');
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg:#090b18;
+  --surface:#111529;
+  --surface2:#171d35;
+  --blue:#637dff;
+  --purple:#a17bff;
+  --white:#f7f8ff;
+  --muted:#a4abc2;
+  --border:rgba(255,255,255,.09);
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'DM Sans',sans-serif;
+  background:
+    radial-gradient(ellipse at 50% -10%,rgba(91,95,255,.20),transparent 42%),
+    radial-gradient(ellipse at 100% 45%,rgba(135,71,255,.08),transparent 35%),
+    var(--bg);
+  color:var(--white);
+  min-height:100vh;
+  padding:22px 15px 35px;
+}
+
+.container {
+  max-width:740px;
+  width:100%;
+  margin:auto;
+}
+
+/* TOP BRAND */
+
+.topbar {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:24px;
+}
+
+.top-logo {
+  width:36px;
+  height:36px;
+  border-radius:11px;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,.15);
+}
+
+.top-brand {
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.top-brand span {
+  color:#9d8aff;
+}
+
+/* HERO */
+
+.hero {
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:36px 25px 31px;
+  border:1px solid var(--border);
+  border-radius:27px;
+  background:linear-gradient(145deg,#171d39,#10152a 65%,#14132a);
+  box-shadow:0 25px 80px rgba(0,0,0,.3);
+}
+
+.hero:before {
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  background:rgba(99,125,255,.18);
+  filter:blur(65px);
+  border-radius:50%;
+  top:-170px;
+  left:calc(50% - 140px);
+  pointer-events:none;
+}
+
+.hero-content {
+  position:relative;
+}
+
+.profile {
+  width:105px;
+  height:105px;
+  margin:0 auto 19px;
+  padding:4px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#7790ff,#b28cff);
+  box-shadow:0 0 32px rgba(112,117,255,.3);
+}
+
+.profile img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  background:#202744;
+}
+
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:1px solid rgba(140,135,255,.25);
+  border-radius:50px;
+  background:rgba(119,115,255,.08);
+  color:#b7b2ff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  margin-bottom:17px;
+}
+
+.eyebrow i {
+  width:6px;
+  height:6px;
+  background:#a997ff;
+  border-radius:50%;
+}
+
+.hero h1 {
+  font-size:clamp(26px,6vw,39px);
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-1.3px;
+}
+
+.gradient-text {
+  background:linear-gradient(90deg,#8198ff,#c09aff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-description {
+  max-width:510px;
+  margin:16px auto 24px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.85;
+}
+
+.cta {
+  max-width:420px;
+  width:100%;
+  min-height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:auto;
+  border:0;
+  border-radius:14px;
+  background:linear-gradient(100deg,#7790ff,#a17cff);
+  color:#fff;
+  font-size:15px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 12px 32px rgba(109,116,255,.23);
+  cursor:pointer;
+  transition:.25s;
+}
+
+.cta:hover {
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(109,116,255,.35);
+}
+
+.telegram-icon {
+  font-size:22px;
+}
+
+.cta-note {
+  color:#a8aec3;
+  font-size:11px;
+  margin-top:12px;
+}
+
+.timer {
+  margin-top:21px;
+  color:var(--muted);
+  font-size:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+
+.timer strong {
+  color:#b7a1ff;
+  font-size:17px;
+}
+
+/* SECTION */
+
+.section {
+  margin-top:22px;
+  padding:25px 23px;
+  background:rgba(17,21,41,.88);
+  border:1px solid var(--border);
+  border-radius:23px;
+}
+
+.section-heading {
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:-.5px;
+  margin-bottom:9px;
+}
+
+.section-sub {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+  margin-bottom:19px;
+}
+
+/* FEATURES */
+
+.features {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.feature {
+  position:relative;
+  overflow:hidden;
+  padding:19px 16px;
+  border:1px solid var(--border);
+  border-radius:17px;
+  background:linear-gradient(145deg,rgba(33,41,75,.7),rgba(19,24,46,.8));
+  transition:.25s;
+}
+
+.feature:hover {
+  border-color:rgba(144,135,255,.35);
+  transform:translateY(-3px);
+}
+
+.feature-icon {
+  width:43px;
+  height:43px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:13px;
+  background:rgba(129,135,255,.12);
+  font-size:22px;
+  margin-bottom:14px;
+}
+
+.feature h3 {
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.feature p {
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+}
+
+/* LEARNING */
+
+.learning {
+  display:grid;
+  gap:12px;
+}
+
+.learning-item {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.025);
+  border-radius:14px;
+}
+
+.check {
+  width:29px;
+  height:29px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  color:#b8a7ff;
+  background:rgba(148,125,255,.13);
+  font-weight:800;
+}
+
+.learning-item p {
+  font-size:13px;
+  font-weight:600;
+}
+
+/* CTA BOTTOM */
+
+.bottom-cta {
+  margin-top:22px;
+  padding:27px 20px;
+  text-align:center;
+  border-radius:22px;
+  border:1px solid rgba(139,129,255,.2);
+  background:linear-gradient(120deg,rgba(91,105,255,.13),rgba(155,104,255,.12));
+}
+
+.bottom-cta h2 {
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.bottom-cta p {
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.8;
+  margin-bottom:19px;
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+  margin-top:22px;
+  padding:19px;
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--border);
+  border-radius:17px;
+}
+
+.disclaimer h3 {
+  font-size:13px;
+  color:#b7a5ff;
+  margin-bottom:9px;
+}
+
+.disclaimer p {
+  font-size:11px;
+  line-height:1.9;
+  color:#a3abc1;
+}
+
+/* FOOTER */
+
+.footer {
+  padding:24px 8px 5px;
+  text-align:center;
+  color:#929bb5;
+  font-size:11px;
+  line-height:2.1;
+}
+
+.footer a {
+  color:#b7a5ff;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.footer-links {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin:10px 0;
+}
+
+.footer-links a {
+  color:#a7aec4;
+  font-weight:500;
+}
+
+@media(max-width:480px) {
+  body { padding:15px 11px 25px; }
+
+  .hero {
+    padding:30px 17px 25px;
+    border-radius:22px;
+  }
+
+  .section { padding:21px 16px; }
+
+  .features { gap:9px; }
+
+  .feature { padding:15px 12px; }
+}
+
+@media(max-width:350px) {
+  .features { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header class="topbar">
+    <img src="logo.png" class="top-logo" alt="Brand logo"
+    onerror="this.style.display='none'">
+    <div class="top-brand">ZERO TO <span>HERO MASTER</span></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <div class="profile">
+        <img src="logo.png" alt="Zero To Hero Master"
+        onerror="this.src='https://placehold.co/200x200/202744/a997ff?text=ZH'">
+      </div>
+
+      <div class="eyebrow">
+        <i></i> STOCK MARKET LEARNING COMMUNITY
+      </div>
+
+      <h1>
+        ZERO TO HERO
+        <span class="gradient-text">MASTER</span>
+      </h1>
+
+      <p class="hero-description">
+        Explore stock market education, market insights and
+        research-related updates. Join our Telegram community
+        and continue your learning journey.
+      </p>
+
+      <a href="#" class="cta" id="telegramBtn">
+        <span class="telegram-icon">➤</span>
+        JOIN FREE TELEGRAM CHANNEL
+      </a>
+
+      <p class="cta-note">
+        Join the community for educational updates and insights.
+      </p>
+
+      <div class="timer">
+        <span>Redirecting in</span>
+        <strong id="countdown">30</strong>
+        <span>seconds</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+
+    <h2 class="section-heading">What You'll Explore</h2>
+
+    <p class="section-sub">
+      Learn about the stock market through educational resources
+      and research-oriented content.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Expert Analysis</h3>
+        <p>
+          Explore market analysis and research-based
+          educational discussions.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">📈</div>
+        <h3>Market Insights</h3>
+        <p>
+          Understand market movements, trends and
+          important developments.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🗓️</div>
+        <h3>Daily Market Updates</h3>
+        <p>
+          Follow relevant market news and
+          research-related updates.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>Learn & Trade Better</h3>
+        <p>
+          Build your understanding of market concepts
+          through continuous learning.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LEARNING -->
+  <section class="section">
+
+    <h2 class="section-heading">Your Learning Journey</h2>
+
+    <p class="section-sub">
+      A community designed around learning and
+      understanding financial markets.
+    </p>
+
+    <div class="learning">
+
+      <div class="learning-item">
+        <div class="check">✓</div>
+        <p>Understand stock market fundamentals</p>
+      </div>
+
+      <div class="learning-item">
+        <div class="check">✓</div>
+        <p>Explore market research and observations</p>
+      </div>
+
+      <div class="learning-item">
+        <div class="check">✓</div>
+        <p>Learn about different market concepts</p>
+      </div>
+
+      <div class="learning-item">
+        <div class="check">✓</div>
+        <p>Access educational discussions and updates</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+
+    <h2>Start Your Learning Journey</h2>
+
+    <p>
+      Join the Telegram community to explore
+      market education and research updates.
+    </p>
+
+    <a href="#" class="cta" id="bottomTelegramBtn">
+      ➤ &nbsp; JOIN TELEGRAM NOW
+    </a>
+
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer">
+
+    <h3>Important Risk Disclaimer</h3>
+
+    <p>
+      Investments in securities are subject to market risks.
+      The information shared through this community is intended
+      for educational and informational purposes only. It should
+      not be considered personalized investment advice or a
+      recommendation to buy or sell securities. No profit or
+      investment outcome is guaranteed. Please conduct your own
+      research and consult an appropriately qualified professional
+      before making investment decisions.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <p>© <span id="year"></span> ZERO TO HERO MASTER</p>
+
+    <div class="footer-links">
+      <a href="#" id="privacyLink">Privacy Policy</a>
+      <a href="#" id="termsLink">Terms & Conditions</a>
+      <a href="#" id="disclaimerLink">Disclaimer</a>
+      <a href="#" id="contactLink">Contact</a>
+    </div>
+
+    <p>
+      Advertise & Managed by
+      <a href="#" id="agencyLink" target="_blank"
+      rel="noopener noreferrer">Snow Ads Agency</a>
+    </p>
+
+  </footer>
+
+</div>
+
+<script>
+
+/* ===================================
+   EDIT YOUR CLIENT SETTINGS HERE
+=================================== */
+
+const TELEGRAM_LINK = "https://t.me/YOUR_CLIENT_TELEGRAM";
+
+const AGENCY_LINK = "https://YOUR-SNOW-AGENCY-LINK.com";
+
+const REDIRECT_SECONDS = 30;
+
+/* FOOTER PAGE LINKS */
+
+const PRIVACY_LINK = "YOUR_PRIVACY_POLICY_URL";
+const TERMS_LINK = "YOUR_TERMS_URL";
+const DISCLAIMER_LINK = "YOUR_DISCLAIMER_URL";
+const CONTACT_LINK = "YOUR_CONTACT_URL";
+
+/* ===================================
+   TELEGRAM BUTTONS
+=================================== */
+
+const telegramButtons = [
+  document.getElementById("telegramBtn"),
+  document.getElementById("bottomTelegramBtn")
+];
+
+telegramButtons.forEach(function(button) {
+
+  button.href = TELEGRAM_LINK;
+
+  button.addEventListener("click", function() {
+
+    if (typeof fbq === "function") {
+      fbq("trackCustom", "TelegramJoinClick");
+    }
+
+  });
+
+});
+
+/* ===================================
+   FOOTER LINKS
+=================================== */
+
+document.getElementById("agencyLink").href = AGENCY_LINK;
+document.getElementById("privacyLink").href = PRIVACY_LINK;
+document.getElementById("termsLink").href = TERMS_LINK;
+document.getElementById("disclaimerLink").href = DISCLAIMER_LINK;
+document.getElementById("contactLink").href = CONTACT_LINK;
+
+/* ===================================
+   COUNTDOWN AUTO REDIRECT
+=================================== */
+
+let remaining = REDIRECT_SECONDS;
+const countdown = document.getElementById("countdown");
+
+const timer = setInterval(function() {
+
+  remaining--;
+  countdown.textContent = remaining;
+
+  if (remaining <= 0) {
+
+    clearInterval(timer);
+
+    if (TELEGRAM_LINK !== "https://t.me/YOUR_CLIENT_TELEGRAM") {
+      window.location.href = TELEGRAM_LINK;
+    }
+
+  }
+
+}, 1000);
+
+/* ===================================
+   FOOTER YEAR
+=================================== */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
